@@ -1,0 +1,210 @@
+
+/*-------------------------------------------
+	Featured
+-------------------------------------------*/
+
+
+#featured {
+
+	.wrap {
+
+		max-width: 1400px;
+		padding: 0;
+		border-top: 2px solid rgb(147, 130, 196);
+		border-bottom: 2px solid rgb(147, 130, 196);
+
+	}
+
+		.flexslider {
+
+			position: relative;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+		}
+
+			.flex-viewport {}
+
+				.slides {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					&:after {
+
+						content: "\0020";
+						display: block;
+						clear: both;
+						visibility: hidden;
+						line-height: 0;
+						height: 0;
+
+					}
+
+					html[xmlns] & {
+
+						display: block;
+
+					}
+
+					* html & {
+
+						height: 1%;
+
+					}
+
+					li {}
+
+					> li {
+
+						display: none;
+						-webkit-backface-visibility: hidden;
+
+					}
+
+					.no-js & {
+
+						> li:first-child {
+
+							display: block;
+
+						}
+
+					}
+
+				}
+
+						img {}
+
+			.flex-control-paging {
+
+				position: absolute;
+				left: 0;
+				bottom: 30px;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				z-index: 5;
+
+				@media screen and (min-width: 960px) {
+
+					bottom: 40px;
+
+				}
+
+				@media screen and (min-width: 1200px) {
+
+					bottom: 50px;
+
+				}
+
+				li {
+
+					display: inline-block;
+
+				}
+
+					a {
+
+						display: block;
+						width: 13px;
+						height: 13px;
+						margin: 14px;
+						background: $white;
+						@include border-radius(50%);
+						@include hide-text;
+
+						&:hover {}
+
+						&.flex-active {
+
+							background: rgb(63, 165, 215);
+
+						}
+
+					}
+
+			}
+
+			.flex-direction-nav {
+
+				position: absolute;
+				top: 50%;
+				width: 100%;
+				height: 48px;
+				max-width: 1170px;
+				margin: -24px 0 0 0;
+				padding: 0;
+				list-style: none;
+				z-index: 5;
+
+				@media screen and (min-width: 1170px) {
+
+					left: 50%;
+					margin-left: -585px;
+
+				}
+
+				li {
+
+					position: absolute;
+					@include hide-text;
+					z-index: 5;
+
+					&:first-of-type {
+
+						left: 15px;
+
+						@media screen and (min-width: 1170px) {
+
+							left: 0;
+
+						}
+
+					}
+
+					&:last-of-type {
+
+						right: 15px;
+
+						@media screen and (min-width: 1170px) {
+
+							right: 0;
+
+						}
+
+						a {
+
+							background-position: -48px 0;
+
+						}
+
+					}
+
+				}
+
+					a {
+
+						display: block;
+						width: 48px;
+						height: 48px;
+						background: url(../img/featured-nav.svg);
+						@include border-radius(50%);
+
+						@media screen and (min-width: 960px) {
+
+							background-color: rgb(147, 130, 196);
+
+						}
+
+						&:hover {}
+
+					}
+
+			}
+
+}

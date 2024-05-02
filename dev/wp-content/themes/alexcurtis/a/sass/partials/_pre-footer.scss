@@ -1,0 +1,319 @@
+
+/*-------------------------------------------
+	Footer
+-------------------------------------------*/
+
+
+#pre-footer {
+
+	padding: 15px 0;
+	color: rgb(147, 217, 251);
+	background: rgb(0, 136, 203) url(../img/pre-footer-background.png);
+
+	@media screen and (min-width: 900px) {
+
+		position: relative;
+		padding: 70px 0 30px 0;
+
+		&:before {
+
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 0;
+			margin-left: -35px;
+			width: 70px;
+			height: 30px;
+			background: url(../img/arrow.svg);
+			z-index: 5;
+
+			#healthy-living &,
+			#yoga-life &,
+			#photos &,
+			#contact & {
+
+				background-position: -70px 0;
+
+			}
+
+		}
+
+	}
+
+	.wrap {
+
+		@media screen and (min-width: 900px) {
+
+			text-align: justify;
+			@include placeholder;
+
+		}
+
+	}
+
+}
+
+		.secondary-nav,
+		.additional-information,
+		.contact-alex {
+
+			@media screen and (min-width: 900px) {
+
+				display: inline-block;
+				width: 30%;
+				vertical-align: top;
+				text-align: center;
+
+			}
+
+			.toggle {
+
+				position: relative;
+				border-bottom: 1px solid $white;
+				border-bottom: 1px solid rgba($white, 0.65);
+				cursor: pointer;
+
+				@media screen and (min-width: 900px) {
+
+					border: none;
+					cursor: default;
+
+				}
+
+				&:after {
+
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 50%;
+					display: block;
+					width: 20px;
+					height: 20px;
+					margin-top: -10px;
+					background: url(../img/pre-footer-toggle.svg);
+					z-index: 5;
+
+					@media screen and (min-width: 900px) {
+
+						background: none;
+
+					}
+
+				}
+
+			}
+
+				h3 {
+
+					margin: 0;
+					padding: 15px 0;
+					color: $white;
+
+					@media screen and (min-width: 900px) {
+
+						margin-bottom: (10/20) + em;
+						@include font-size(20);
+						line-height: (28/20) + em;
+						padding: 0;
+
+					}
+
+				}
+
+			.container {
+
+				display: none;
+
+				@media screen and (min-width: 900px) {
+
+					display: block;
+
+				}
+
+			}
+
+			// While open...
+
+			&.open {
+
+				.toggle {
+
+					&:after {
+
+						background-position: 0 -20px;
+
+					}
+
+				}
+
+				.container {
+
+					display: block;
+
+				}
+
+			}
+
+		}
+
+		.secondary-nav {
+
+			.toggle {
+
+				border-top: none;
+
+			}
+
+			.container {}
+
+				ul {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+				}
+
+					li {
+
+						border-bottom: 1px solid rgb(61, 169, 222);
+
+						&:last-of-type {
+
+							border: none;
+
+						}
+
+					}
+
+						a {
+
+							display: block;
+							padding: 10px 0;
+							color: rgb(147, 217, 251);
+
+							&:hover {
+
+								color: $white;
+
+							}
+
+						}
+
+		}
+
+		.additional-information {
+
+			.toggle {}
+
+			.container {}
+
+				ul {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+				}
+
+					li {
+
+						padding: 15px 0;
+						border-bottom: 1px dashed rgb(61, 169, 222);
+
+						&:last-of-type {
+
+							border: none;
+
+						}
+
+					}
+
+						p {
+
+							&:last-of-type {
+
+								margin: 0;
+
+							}
+
+						}
+
+		}
+
+		.contact-alex {
+
+			.toggle {
+
+				border: none;
+
+			}
+
+			.container {}
+
+				.teaser {
+
+					margin: 0 0 15px 0;
+					padding: 15px 0;
+					border-bottom: 1px dashed rgb(61, 169, 222);
+
+					p {
+
+						&:last-of-type {
+
+							margin: 0;
+
+						}
+
+					}
+
+				}
+
+				p {}
+
+				.vcard {
+
+					margin: 0 0 15px 0;
+
+				}
+
+					.org {}
+
+					.adr {}
+
+						.locality {}
+
+						.region {}
+
+					.tel {}
+
+					.email {
+
+						color: rgb(147, 217, 251);
+
+						&:hover {
+
+							color: $white;
+
+						}
+
+					}
+
+			&.open {
+
+				.toggle {
+
+					border-bottom: 1px solid $white;
+					border-bottom: 1px solid rgba($white, 0.65);
+
+					@media screen and (min-width: 900px) {
+
+						border: none;
+
+					}
+
+				}
+
+			}
+
+		}

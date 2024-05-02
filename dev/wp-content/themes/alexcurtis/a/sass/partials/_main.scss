@@ -1,0 +1,313 @@
+
+/*-------------------------------------------
+	Main
+-------------------------------------------*/
+
+
+#main {
+
+	text-align: center;
+
+	// Home, Healthy Living
+
+	#home &,
+	#healthy-living & {
+
+		max-width: 770px;
+		margin: 0 auto;
+
+	}
+
+	// About, Yoga Life, Contact
+
+	#about &,
+	#yoga-life &,
+	#contact & {
+
+		@include group;
+
+	}
+
+}
+
+
+// Content
+
+
+.content {
+
+	// About
+
+	#about & {
+
+		@media screen and (min-width: 440px) {
+
+			text-align: left;
+
+		}
+
+		@media screen and (min-width: 960px) {
+
+			float: left;
+			width: 56%;
+			padding: 0 25px;
+
+		}
+
+	}
+
+	// Yoga Life
+
+	#yoga-life & {
+
+		@media screen and (min-width: 750px) {
+
+			float: left;
+			width: 50%;
+			padding: 0 0 0 25px;
+			text-align: left;
+
+		}
+
+	}
+
+}
+
+
+// Aside
+
+
+aside {
+
+	margin: 35px 0 0 0;
+	padding: 40px 0 15px 0;
+	text-align: center;
+	border-top: 1px solid rgb(189, 189, 189);
+
+	#about & {
+
+		@media screen and (min-width: 440px) {
+
+			clear: both;
+
+		}
+
+		@media screen and (min-width: 960px) {
+
+			clear: none;
+			float: left;
+			width: 22%;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			border: none;
+
+		}
+
+	}
+
+	h3 {
+
+		text-transform: none;
+
+	}
+
+	p {}
+
+}
+
+
+// Featured Image
+
+.featured-image {
+
+	margin: 0 0 30px 0;
+
+	img {}
+
+	// About
+
+	#about & {
+
+		@media screen and (min-width: 440px) {
+
+			float: left;
+			width: 40%;
+			margin: 0 30px 30px 0;
+
+		}
+
+		@media screen and (min-width: 960px) {
+
+			width: 22%;
+			margin: 0;
+
+		}
+
+	}
+
+	// Yoga Life, Contact
+
+	#yoga-life &,
+	#contact & {
+
+		@media screen and (min-width: 750px) {
+
+			float: left;
+			width: 50%;
+			margin: 0;
+
+		}
+
+	}
+
+}
+
+
+// Form
+
+
+.form {
+
+	// Contact
+
+	#contact & {
+
+		@media screen and (min-width: 750px) {
+
+			float: left;
+			width: 50%;
+			padding: 0 0 0 25px;
+
+		}
+
+	}
+
+	.gform_wrapper {
+
+		display: block !important;
+
+	}
+
+		form {}
+
+			.gform_heading {}
+
+				.gform_description {
+
+					display: block;
+					margin: 0 0 20px 0;
+					text-align: left;
+
+				}
+
+			.gform_body {}
+
+				.gform_fields {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+				}
+
+					.gfield {
+
+						margin: 0 0 25px 0;
+
+						@media screen and (min-width: 110px) {
+
+							@include group;
+
+						}
+
+					}
+
+						.gfield_label {
+
+							display: block;
+							margin: 0 0 10px 0;
+							text-align: left;
+
+							@media screen and (min-width: 550px) and (max-width: 749px), screen and (min-width: 1000px) {
+
+								float: left;
+								width: 25%;
+
+							}
+
+						}
+
+						.ginput_container {
+
+							text-align: left;
+
+							@media screen and (min-width: 550px) and (max-width: 749px), screen and (min-width: 1000px) {
+
+								float: left;
+								width: 75%;
+
+							}
+
+							input {}
+
+							textarea {}
+
+							select {}
+
+						}
+
+							.gfield_description {
+
+								margin-top: (12/12) + em;
+								@include font-size(12);
+								line-height: (16/12) + em;
+								text-align: left;
+								color: rgb(115, 115, 115);
+
+								@media screen and (min-width: 550px) and (max-width: 749px), screen and (min-width: 1000px) {
+
+									clear: both;
+									margin: 0;
+									padding-top: (12/12) + em;
+									padding-left: 25%;
+
+								}
+
+							}
+
+			.gform_footer {}
+
+				.gform_button {
+
+					float: right;
+
+				}
+
+}
+
+
+// More Button
+
+.more {
+
+	margin: 30px 0 0 0;
+	text-align: center;
+
+	a {
+
+		display: inline-block;
+		padding: 10px 20px;
+		color: $white;
+		background: rgb(80, 67, 117);
+		@include transition(background 0.25s);
+
+		&:hover {
+
+			background: rgba(80, 67, 117, 0.90);
+
+		}
+
+	}
+
+}

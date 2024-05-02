@@ -1,0 +1,123 @@
+
+/*-------------------------------------------
+	Tips
+-------------------------------------------*/
+
+
+#nutrition-tips {
+
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 35px 0;
+	background: rgb(239, 239, 239);
+
+	@media screen and (min-width: 700px) {
+
+		padding: 35px 0 15px 0;
+
+	}
+
+	.wrap {}
+
+		header {}
+
+			h2 {
+
+				margin-bottom: (28/24) + em;
+				@include font-size(24);
+				line-height: (28/24) + em;
+				text-align: center;
+
+			}
+
+		.container {}
+
+			ol {
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				counter-reset: li;
+
+				@media screen and (min-width: 700px) {
+
+					text-align: justify;
+					@include placeholder;
+
+				}
+
+			}
+
+				li {
+
+					padding: 25px 20px 20px 20px;
+					border-bottom: 1px solid rgb(190, 190, 190);
+
+					@media screen and (min-width: 700px) {
+
+						display: inline-block;
+						width: 49%;
+						text-align: left;
+						vertical-align: top;
+						border: none;
+
+					}
+
+					@media screen and (min-width: 1000px) {
+
+						width: 32%;
+
+					}
+
+					&:last-of-type {
+
+						border: none;
+
+					}
+
+				}
+
+					h3 {
+
+						position: relative;
+						margin-bottom: (16/20) + em;
+						padding: 0 0 0 46px;
+						@include font-size(20);
+						line-height: (24/20) + em;
+						color: rgb(0, 136, 203);
+						text-transform: none;
+
+						&:before {
+
+							content: counter(li)"";
+							counter-increment: li;
+							position: absolute;
+							left: 0;
+							top: -7px;
+							display: block;
+							width: 36px;
+							height: 30px;
+							margin: 0;
+							padding: 6px 0 0 0;
+							@include bitter-regular;
+							text-align: center;
+							color: $white;
+							background: rgb(80, 67, 117);
+							@include border-radius(50%);
+							z-index: 5;
+
+						}
+
+					}
+
+					p {
+
+						&:last-of-type {
+
+							margin: 0;
+
+						}
+
+					}
+
+}

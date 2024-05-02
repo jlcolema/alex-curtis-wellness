@@ -1,0 +1,196 @@
+
+/*-------------------------------------------
+	Testimonials
+-------------------------------------------*/
+
+
+#testimonials {
+
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 35px 0 30px 0;
+	background: $white;
+
+	.wrap {}
+
+		header {}
+
+			h2 {
+
+				@include font-size(24);
+				line-height: (28/24) + em;
+				text-align: center;
+
+			}
+
+		.container {}
+
+			.flexslider {
+
+				width: 100%;
+				max-width: 570px;
+				margin: 0 auto;
+				padding: 0;
+
+			}
+
+				.flex-viewport {
+
+					margin: 0 0 15px 0;
+					background: rgb(236, 236, 236);
+					border: 1px solid rgb(189, 189, 189);
+
+				}
+
+					.slides {
+
+						margin: 0;
+						padding: 0;
+						list-style: none;
+
+						&:after {
+
+							content: "\0020";
+							display: block;
+							clear: both;
+							visibility: hidden;
+							line-height: 0;
+							height: 0;
+
+						}
+
+						html[xmlns] & {
+
+							display: block;
+
+						}
+
+						* html & {
+
+							height: 1%;
+
+						}
+
+						li {}
+
+						> li {
+
+							display: none;
+							-webkit-backface-visibility: hidden;
+
+						}
+
+						.no-js & {
+
+							> li:first-child {
+
+								display: block;
+
+							}
+
+						}
+
+					}
+
+						.inner-wrap {
+
+							padding: 15px;
+							@include group;
+
+							@media screen and (min-width: 600px) {
+
+								padding: 20px;
+
+							}
+
+						}
+
+								img {
+
+									float: left;
+									width: 25%;
+
+									@media screen and (min-width: 600px) {
+
+										width: 23%;
+
+									}
+
+								}
+
+									blockquote {
+
+										float: right;
+										width: 75%;
+										padding: 0 0 0 15px;
+
+										@media screen and (min-width: 600px) {
+
+											width: 77%;
+
+										}
+
+									}
+
+										p {
+
+											margin-bottom: (9/14) + em;
+
+										}
+
+										cite {
+
+											font-style: normal;
+
+										}
+
+											a {
+
+												&:hover {}
+
+											}
+
+												.age {}
+
+				.flex-control-paging {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					text-align: center;
+
+					li {
+
+						display: inline-block;
+
+					}
+
+						a {
+
+							display: block;
+							width: 13px;
+							height: 13px;
+							margin: 14px 7px;
+							background: rgb(219, 219, 219);
+							@include border-radius(50%);
+							@include hide-text;
+
+							.touch & {
+
+								margin: 14px;
+
+							}
+
+							&:hover {}
+
+							&.flex-active {
+
+								background: rgb(63, 165, 215);
+
+							}
+
+						}
+
+				}
+
+}
