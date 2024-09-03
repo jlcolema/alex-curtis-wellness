@@ -1,1 +1,1 @@
-# alex-curtis-wellness
+# Alex Curtis Wellness
